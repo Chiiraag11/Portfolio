@@ -1639,12 +1639,12 @@ body {
 
 @media (min-width: 640px){
 
-  .sm\:block{
-    display: block;
+  .sm\:col-span-2{
+    grid-column: span 2 / span 2;
   }
 
-  .sm\:flex{
-    display: flex;
+  .sm\:block{
+    display: block;
   }
 
   .sm\:grid-cols-2{

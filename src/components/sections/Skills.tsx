@@ -10,10 +10,10 @@ export default function Skills() {
       <div className="max-w-5xl mx-auto px-6">
         <SectionHeader title="Skills" subtitle="what i work with" />
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6 justify-items-center">
           {SKILLS.map((cat, i) => (
             <FadeUp key={i} delay={i * 0.1}>
-              <div className="group glass rounded-2xl p-7 border border-white/8 hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-500/10 transition-all duration-300 h-full">
+              <div className="group glass rounded-2xl p-7 border border-white/8 ... w-full max-w-md">
                 <div className="flex items-center gap-3 mb-5">
                   <span className="text-2xl">{cat.icon}</span>
                   <h3 className="font-display text-lg font-bold text-white">{cat.category}</h3>
