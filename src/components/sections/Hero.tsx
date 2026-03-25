@@ -157,13 +157,13 @@ export default function Hero() {
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <a
-            href="/resume.pdf"
-            download
-            className="group flex items-center gap-2 px-7 py-3.5 rounded-xl glass border border-white/10 text-white font-medium hover:bg-white/8 hover:border-white/20 active:scale-95 transition-all duration-200"
-          >
-            <Download size={16} />
-            Download Resume
-          </a>
+  href="/Chirag_Prasad_Resume.pdf"
+  download
+  className="group flex items-center gap-2 px-7 py-3.5 rounded-xl glass border border-white/10 text-white font-medium hover:bg-white/8 hover:border-white/20 active:scale-95 transition-all duration-200"
+>
+  <Download size={16} />
+  Download Resume
+</a>
         </motion.div>
 
         {/* Social Links */}
