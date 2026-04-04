@@ -179,7 +179,7 @@ export const PROJECTS = [
     desc: 'Build a full stack AI powered resume builder for creating and editing professional resumes',
     stack: ['React.js', 'Next.js', 'MongoDB', 'Tailwind' , 'Express.js' , 'Node.js'],
     live: '#',
-    repo: 'https://github.com',
+    repo: 'https://github.com/Chiiraag11/HelpResume.git',
     featured: true,
   },
   {
