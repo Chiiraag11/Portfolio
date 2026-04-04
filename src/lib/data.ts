@@ -204,7 +204,7 @@ export const PROJECTS = [
     desc: 'Build a application for image enhancement using CLAHE Tech and Histogram Equalization',
     stack: ['Python'],
     live: '#',
-    repo: 'https://github.com',
+    repo: 'https://github.com/Chiiraag11/Image-Enhancement.git',
     featured: false,
   },
 ]
