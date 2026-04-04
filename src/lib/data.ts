@@ -170,8 +170,8 @@ export const PROJECTS = [
     title: 'ASTRA',
     desc: 'A Web based security analysis app for detection of fake urls and apks providing deep analysis and reports',
     stack: ['Next.js', 'Tailwind', 'Postgres', 'React.js', 'Vite'],
-    live: 'astra-orpin-two.vercel.app',
-    repo: 'https://github.com',
+    live: 'https://astra-orpin-two.vercel.app/',
+    repo: 'https://github.com/Chiiraag11/ASTRA.git',
     featured: true,
   },
   {
@@ -194,8 +194,8 @@ export const PROJECTS = [
     title: 'qr-ify generator',
     desc: 'Developed a QR Code Generator web application with customizable themes and color options for enhanced user experience.',
     stack: ['HTML', 'CSS3', 'Javascript', 'Bootstrap'],
-    live: 'qr-ify-generator.vercel.app',
-    repo: 'https://github.com',
+    live: 'https://qr-ify-generator.vercel.app/',
+    repo: 'https://github.com/Chiiraag11/qr-ify-generator.git',
     featured: false,
   },
  
