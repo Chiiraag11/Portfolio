@@ -14,19 +14,23 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ]
 
+
+
 export const EXPERIENCE = [
   {
     role: 'Intern',
-    org: 'Grasim Industries(Aditya Birla Group)',
+    org: 'Grasim Industries (Aditya Birla Group)',
     duration: 'Dec 2025 – Jan 2026',
 
     desc: [
-  'Built a centralized enterprise Trainee Tracker application using Microsoft Power Apps, Dataverse, and SharePoint, implementing role-based access for three user roles (HR, trainees, and department) along with four core modules for trainee management, assignments, progress tracking, and certification.',
-  
-  'Automated end-to-end certificate generation and assignment workflows using Power Automate by integrating Word templates with Dataverse, converting them to PDF, and distributing via Outlook—reducing manual processing time from ~5 minutes per trainee to under 20 seconds (~95% time savings) and enabling real-time monitoring through Power BI dashboards.'
-],
+      'Built a centralized enterprise Trainee Tracker application using Microsoft Power Apps, Dataverse, and SharePoint, implementing role-based access for three user roles (HR, trainees, and department) along with four core modules for trainee management, assignments, progress tracking, and certification.',
+
+      'Automated end-to-end certificate generation and assignment workflows using Power Automate by integrating Word templates with Dataverse, converting them to PDF, and distributing via Outlook—reducing manual processing time from ~5 minutes per trainee to under 20 seconds (~95% time savings) and enabling real-time monitoring through Power BI dashboards.'
+    ],
 
     color: 'blue',
+
+    report: '/reports/report.pdf'
   },
 ]
 
