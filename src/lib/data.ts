@@ -89,18 +89,18 @@ export const ACHIEVEMENTS = [
     highlight: '4th Place',
   },
   {
-    title: 'CodeChef',
+    title: 'CodeChef & Leetcode',
     subtitle: 'Competitive Programming',
-    description: 'Achieved 2★ rating with max rating of 1537',
+    description: 'Achieved 2★ rating with max rating of 1555 & 1500 rating on LeetCode',
     icon: '💻',
     highlight: '2★',
   },
   {
     title: 'DSA Practice',
     subtitle: 'LeetCode • CodeChef • GeeksforGeeks',
-    description: 'Solved 350+ data structures and algorithms problems',
+    description: 'Solved 400+ data structures and algorithms problems',
     icon: '📊',
-    highlight: '350+ Problems',
+    highlight: '400+ Problems',
   },
 ]
 
