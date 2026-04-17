@@ -14,19 +14,23 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ]
 
+
+
 export const EXPERIENCE = [
   {
     role: 'Intern',
-    org: 'Grasim Industries(Aditya Birla Group)',
+    org: 'Grasim Industries (Aditya Birla Group)',
     duration: 'Dec 2025 – Jan 2026',
 
     desc: [
-  'Built a centralized enterprise Trainee Tracker application using Microsoft Power Apps, Dataverse, and SharePoint, implementing role-based access for three user roles (HR, trainees, and department) along with four core modules for trainee management, assignments, progress tracking, and certification.',
-  
-  'Automated end-to-end certificate generation and assignment workflows using Power Automate by integrating Word templates with Dataverse, converting them to PDF, and distributing via Outlook—reducing manual processing time from ~5 minutes per trainee to under 20 seconds (~95% time savings) and enabling real-time monitoring through Power BI dashboards.'
-],
+      'Built a centralized enterprise Trainee Tracker application using Microsoft Power Apps, Dataverse, and SharePoint, implementing role-based access for three user roles (HR, trainees, and department) along with four core modules for trainee management, assignments, progress tracking, and certification.',
+
+      'Automated end-to-end certificate generation and assignment workflows using Power Automate by integrating Word templates with Dataverse, converting them to PDF, and distributing via Outlook—reducing manual processing time from ~5 minutes per trainee to under 20 seconds (~95% time savings) and enabling real-time monitoring through Power BI dashboards.'
+    ],
 
     color: 'blue',
+
+    report: '/reports/report.pdf'
   },
 ]
 
@@ -85,18 +89,18 @@ export const ACHIEVEMENTS = [
     highlight: '4th Place',
   },
   {
-    title: 'CodeChef',
+    title: 'CodeChef & Leetcode',
     subtitle: 'Competitive Programming',
-    description: 'Achieved 2★ rating with max rating of 1537',
+    description: 'Achieved 2★ rating with max rating of 1555 & 1500 rating on LeetCode',
     icon: '💻',
     highlight: '2★',
   },
   {
     title: 'DSA Practice',
     subtitle: 'LeetCode • CodeChef • GeeksforGeeks',
-    description: 'Solved 350+ data structures and algorithms problems',
+    description: 'Solved 400+ data structures and algorithms problems',
     icon: '📊',
-    highlight: '350+ Problems',
+    highlight: '400+ Problems',
   },
 ]
 
@@ -170,8 +174,8 @@ export const PROJECTS = [
     title: 'ASTRA',
     desc: 'A Web based security analysis app for detection of fake urls and apks providing deep analysis and reports',
     stack: ['Next.js', 'Tailwind', 'Postgres', 'React.js', 'Vite'],
-    live: '#',
-    repo: 'https://github.com',
+    live: 'https://astra-orpin-two.vercel.app/',
+    repo: 'https://github.com/Chiiraag11/ASTRA.git',
     featured: true,
   },
   {
@@ -179,7 +183,7 @@ export const PROJECTS = [
     desc: 'Build a full stack AI powered resume builder for creating and editing professional resumes',
     stack: ['React.js', 'Next.js', 'MongoDB', 'Tailwind' , 'Express.js' , 'Node.js'],
     live: '#',
-    repo: 'https://github.com',
+    repo: 'https://github.com/Chiiraag11/HelpResume.git',
     featured: true,
   },
   {
@@ -194,8 +198,8 @@ export const PROJECTS = [
     title: 'qr-ify generator',
     desc: 'Developed a QR Code Generator web application with customizable themes and color options for enhanced user experience.',
     stack: ['HTML', 'CSS3', 'Javascript', 'Bootstrap'],
-    live: '#',
-    repo: 'https://github.com',
+    live: 'https://qr-ify-generator.vercel.app/',
+    repo: 'https://github.com/Chiiraag11/qr-ify-generator.git',
     featured: false,
   },
  
@@ -204,7 +208,7 @@ export const PROJECTS = [
     desc: 'Build a application for image enhancement using CLAHE Tech and Histogram Equalization',
     stack: ['Python'],
     live: '#',
-    repo: 'https://github.com',
+    repo: 'https://github.com/Chiiraag11/Image-Enhancement.git',
     featured: false,
   },
 ]
