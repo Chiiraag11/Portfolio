@@ -178,6 +178,14 @@ export const PROJECTS = [
     repo: 'https://github.com/Chiiraag11/ASTRA.git',
     featured: true,
   },
+ {
+  title: 'CyberPulse',
+  desc: 'Developed and deployed a full-stack cybersecurity monitoring platform for real-time website security analysis, featuring automated risk scoring, security audits, PDF report exports, and interactive analytics dashboards.',
+  stack: ['Next.js', 'Node.js', 'Express.js', 'MongoDB Atlas', 'REST APIs', 'Recharts', 'Tailwind CSS'],
+  live: 'https://cyber-pulse-nine.vercel.app/',
+  repo: 'https://github.com/Chiiraag11/CyberPulse',
+  featured: true,
+},
   {
     title: 'HelpResume',
     desc: 'Build a full stack AI powered resume builder for creating and editing professional resumes',
@@ -185,14 +193,6 @@ export const PROJECTS = [
     live: '#',
     repo: 'https://github.com/Chiiraag11/HelpResume.git',
     featured: true,
-  },
-  {
-    title: 'Project Management System',
-    desc: 'Built a backend for a Project Management System using the MERN stack, enabling efficient task management, user authentication, and scalable API handling.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-    live: '#',
-    repo: 'https://github.com',
-    featured: false,
   },
   {
     title: 'qr-ify generator',
