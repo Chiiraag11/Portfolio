@@ -174,7 +174,7 @@ export const PROJECTS = [
     title: 'ASTRA',
     desc: 'A Web based security analysis app for detection of fake urls and apks providing deep analysis and reports',
     stack: ['Next.js', 'Tailwind', 'Postgres', 'React.js', 'Vite'],
-    live: 'https://astra-orpin-two.vercel.app/',
+    live: 'https://astra-eta-nine.vercel.app/',
     repo: 'https://github.com/Chiiraag11/ASTRA.git',
     featured: true,
   },
