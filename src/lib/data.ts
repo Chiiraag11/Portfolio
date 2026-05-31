@@ -184,7 +184,7 @@ export const PROJECTS = [
   stack: ['Next.js', 'Node.js', 'Express.js', 'MongoDB Atlas', 'REST APIs', 'Recharts', 'Tailwind CSS'],
   live: 'https://cyber-pulse-nine.vercel.app/',
   repo: 'https://github.com/Chiiraag11/CyberPulse',
-  featured: true,
+  featured: false,
 },
 {
     title: 'finance-manager',
@@ -200,7 +200,7 @@ export const PROJECTS = [
     stack: ['React'],
     live: 'loan-flow-gamma.vercel.app',
     repo: 'https://github.com/Chiiraag11/LoanFlow',
-    featured: false,
+    featured: true,
   },
 
   {
@@ -209,7 +209,7 @@ export const PROJECTS = [
     stack: ['React.js', 'Next.js', 'MongoDB', 'Tailwind' , 'Express.js' , 'Node.js'],
     live: '#',
     repo: 'https://github.com/Chiiraag11/HelpResume.git',
-    featured: true,
+    featured: false,
   },
   {
     title: 'qr-ify generator',
