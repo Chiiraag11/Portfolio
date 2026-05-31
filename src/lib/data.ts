@@ -207,7 +207,7 @@ export const PROJECTS = [
   'Mongoose',
   'Tailwind CSS',
 ],
-    live: 'loan-flow-gamma.vercel.app',
+    live: 'https://loan-flow-gamma.vercel.app',
     repo: 'https://github.com/Chiiraag11/LoanFlow',
     featured: true,
   },
