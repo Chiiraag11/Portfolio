@@ -186,6 +186,23 @@ export const PROJECTS = [
   repo: 'https://github.com/Chiiraag11/CyberPulse',
   featured: true,
 },
+{
+    title: 'finance-manager',
+    desc: 'A RESTful backend service for managing personal finances — built with Kotlin, Spring Boot 3.x, and H2',
+    stack: ['Kotlin'],
+    repo: 'https://github.com/Chiiraag11/finance-manager',
+    featured: false,
+  },
+
+  {
+    title: 'LoanFlow',
+    desc: 'A production-quality, full-stack Loan Management System built with Next.js 15, Express.js, MongoDB, and JWT authentication',
+    stack: ['React'],
+    live: 'loan-flow-gamma.vercel.app',
+    repo: 'https://github.com/Chiiraag11/LoanFlow',
+    featured: false,
+  },
+
   {
     title: 'HelpResume',
     desc: 'Build a full stack AI powered resume builder for creating and editing professional resumes',
@@ -207,10 +224,10 @@ export const PROJECTS = [
     title: 'Image Enhancement',
     desc: 'Build a application for image enhancement using CLAHE Tech and Histogram Equalization',
     stack: ['Python'],
-    live: '#',
     repo: 'https://github.com/Chiiraag11/Image-Enhancement.git',
     featured: false,
   },
+
 ]
 
 export const SOCIAL = {
