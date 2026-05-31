@@ -49,27 +49,55 @@ export const SKILLS = [
   {
     category: 'Languages',
     icon: '⌨',
-    items: ['C++', 'Python', 'JavaScript', 'TypeScript', 'SQL' ,'Power Fx'],
+    items: [
+      'C++',
+      'C',
+      'JavaScript',
+      'TypeScript',
+      'Python',
+      'SQL',
+      'HTML5'
+    ],
   },
   {
-    category: 'Technonologies',
+    category: 'Technologies',
     icon: '🌐',
     items: [
-  'React.js',
-  'Next.js',
-  'Node.js',
-  'Express.js',
-  'MongoDB',
-  'PostgreSQL',
-  'FastAPI',
-  'Bootstrap',
-  'Tailwind CSS'
-],
+      'React.js',
+      'Next.js',
+      'Node.js',
+      'Express.js',
+      'FastAPI',
+      'JWT',
+      'REST APIs',
+      'Tailwind CSS'
+    ],
+  },
+  {
+    category: 'Databases',
+    icon: '🗄️',
+    items: [
+      'MongoDB',
+      'PostgreSQL',
+      'MySQL',
+      'Firebase'
+    ],
   },
   {
     category: 'Tools & Platforms',
     icon: '🛠',
-    items: ['Git', 'GitHub', 'VS Code', 'Postman', 'Figma','Canva', 'Vercel' , 'BurpSuite' , 'MATLAB' , 'PowerApps'],
+    items: [
+      'Git',
+      'GitHub',
+      'VS Code',
+      'Postman',
+      'Docker',
+      'Linux',
+      'Render',
+      'Vercel',
+      'Burp Suite',
+      'Power Apps'
+    ],
   },
 ]
 
