@@ -197,7 +197,16 @@ export const PROJECTS = [
   {
     title: 'LoanFlow',
     desc: 'A production-quality, full-stack Loan Management System built with Next.js 15, Express.js, MongoDB, and JWT authentication',
-    stack: ['React'],
+    stack: [
+  'Next.js 15',
+  'React',
+  'TypeScript',
+  'Node.js',
+  'Express.js',
+  'MongoDB',
+  'Mongoose',
+  'Tailwind CSS',
+],
     live: 'loan-flow-gamma.vercel.app',
     repo: 'https://github.com/Chiiraag11/LoanFlow',
     featured: true,
