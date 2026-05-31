@@ -139,7 +139,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-slate-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed"
         >
-         Turning ideas into efficient solutions through strong DSA and system design skills. 3rd-year IIIT Bhopal student driven by curiosity in cybersecurity and modern web development.
+          I'm a developer who sits at the intersection of full-stack engineering and cybersecurity — building secure, scalable applications that solve real-world problems. Whether it's designing threat detection platforms, developing enterprise solutions, or shipping production-ready APIs, I care deeply about writing clean code and creating systems that are reliable, efficient, and impactful.
         </motion.p>
 
         {/* CTA Buttons */}
