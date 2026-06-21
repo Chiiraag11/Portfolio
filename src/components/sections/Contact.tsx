@@ -1,58 +1,36 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, ExternalLink, Heart } from 'lucide-react'
+import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
 import { SOCIAL } from '@/lib/data'
 import { FadeUp } from '@/components/ui/Animations'
 
 export default function Contact() {
   return (
     <section id="contact" className="section-pad relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute inset-0 bg-gradient-to-t from-violet-950/20 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-radial from-violet-600/10 to-transparent blur-3xl pointer-events-none" />
-
-      <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <FadeUp>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-slate-400 font-mono mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-            open to opportunities
+          <div className="inline-flex items-center gap-2 chip mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+            Open to opportunities
           </div>
-          <h2 className="font-display text-5xl md:text-6xl font-extrabold text-white mb-6">
+
+          <h2 className="font-display text-5xl md:text-7xl font-medium text-ink leading-[1.02] tracking-tight">
             Let&apos;s{' '}
-            <span className="gradient-text">Connect</span>
+            <span className="italic font-light text-brand">connect.</span>
           </h2>
-          <p className="text-slate-500 text-lg leading-relaxed max-w-xl mx-auto mb-12">
+          <p className="text-ink-soft text-lg leading-relaxed max-w-xl mx-auto mt-6 mb-12">
             Whether you have a project in mind, an internship opportunity, or just want to say hello —
             my inbox is always open.
           </p>
         </FadeUp>
 
-        {/* Contact Cards */}
         <FadeUp delay={0.15}>
-          <div className="grid sm:grid-cols-3 gap-4 mb-12">
+          <div className="grid sm:grid-cols-3 gap-4 mb-12 text-left">
             {[
-              {
-                icon: <Github size={24} />,
-                label: 'GitHub',
-                sub: 'chiragprasad',
-                href: SOCIAL.github,
-                glow: 'hover:shadow-white/10 hover:border-white/25',
-              },
-              {
-                icon: <Linkedin size={24} />,
-                label: 'LinkedIn',
-                sub: 'in/chiragprasad',
-                href: SOCIAL.linkedin,
-                glow: 'hover:shadow-blue-500/20 hover:border-blue-500/40',
-              },
-              {
-                icon: <Mail size={24} />,
-                label: 'Email',
-                sub: SOCIAL.email,
-                href: `mailto:${SOCIAL.email}`,
-                glow: 'hover:shadow-violet-500/20 hover:border-violet-500/40',
-              },
+              { icon: <Github size={22} />, label: 'GitHub', sub: 'Chiiraag11', href: SOCIAL.github },
+              { icon: <Linkedin size={22} />, label: 'LinkedIn', sub: 'in/chiragprasad11', href: SOCIAL.linkedin },
+              { icon: <Mail size={22} />, label: 'Email', sub: SOCIAL.email, href: `mailto:${SOCIAL.email}` },
             ].map(link => (
               <motion.a
                 key={link.label}
@@ -60,45 +38,42 @@ export default function Contact() {
                 target={link.label !== 'Email' ? '_blank' : undefined}
                 rel="noopener noreferrer"
                 whileHover={{ y: -4 }}
-                className={`group glass rounded-2xl p-6 border border-white/8 hover:shadow-lg transition-all duration-300 ${link.glow}`}
+                className="group surface surface-hover p-6 flex flex-col gap-4"
               >
-                <div className="flex flex-col items-center gap-3">
-                  <div className="p-3 rounded-xl bg-white/5 group-hover:bg-white/10 transition-colors text-slate-200 group-hover:text-white">
+                <div className="flex items-center justify-between">
+                  <div className="p-2.5 rounded-lg bg-paper-2 border border-line text-ink group-hover:text-brand transition-colors">
                     {link.icon}
                   </div>
-                  <div>
-                    <p className="font-display font-bold text-white text-sm">{link.label}</p>
-                    <p className="text-slate-300 text-xs font-mono mt-0.5">{link.sub}</p>
-                  </div>
-                  <ExternalLink size={12} className="text-slate-200 group-hover:text-slate-400 transition-colors" />
+                  <ExternalLink size={14} className="text-ink-muted group-hover:text-brand transition-colors" />
+                </div>
+                <div>
+                  <p className="font-display text-lg text-ink">{link.label}</p>
+                  <p className="text-ink-muted text-xs font-mono mt-1 truncate">{link.sub}</p>
                 </div>
               </motion.a>
             ))}
           </div>
         </FadeUp>
 
-        {/* CTA Button */}
         <FadeUp delay={0.25}>
           <a
             href={`mailto:${SOCIAL.email}`}
-            className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-display font-bold text-lg hover:shadow-2xl hover:shadow-violet-500/30 active:scale-95 transition-all duration-200"
+            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-ink text-paper font-medium text-base hover:bg-brand transition-colors"
           >
-            <Mail size={20} />
+            <Mail size={18} />
             Send me a message
             <motion.span
               animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
+              transition={{ duration: 1.6, repeat: Infinity }}
             >
               →
             </motion.span>
           </a>
         </FadeUp>
 
-        {/* Divider */}
-        <div className="mt-20 pt-8 border-t border-white/5">
-          <p className="text-slate-200 text-sm font-mono flex items-center justify-center gap-2">
-            Built 
-            by Chirag Prasad · {new Date().getFullYear()}
+        <div className="mt-24 pt-8 border-t border-line">
+          <p className="text-ink-muted text-sm font-mono">
+            Built by Chirag Prasad · {new Date().getFullYear()}
           </p>
         </div>
       </div>

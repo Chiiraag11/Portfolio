@@ -67,6 +67,16 @@ module.exports = {
         slate: {
           950: '#020617',
         },
+        // Editorial light theme tokens (ported from Lovable design reference)
+        paper: 'var(--paper)',
+        'paper-2': 'var(--paper-2)',
+        'paper-3': 'var(--paper-3)',
+        line: 'var(--line)',
+        ink: 'var(--ink)',
+        'ink-soft': 'var(--ink-soft)',
+        'ink-muted': 'var(--ink-muted)',
+        brand: 'var(--brand)',
+        'brand-soft': 'var(--brand-soft)',
       },
 
       /* ── Spacing / sizing ── */

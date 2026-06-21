@@ -5,43 +5,30 @@ import { SectionHeader, StaggerChildren, StaggerItem } from '@/components/ui/Ani
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="section-pad">
-      <div className="max-w-5xl mx-auto px-6">
-        <SectionHeader title="Achievements" subtitle="key accomplishments & milestones" />
+    <section id="achievements" className="section-pad bg-paper-2/50">
+      <div className="max-w-6xl mx-auto px-6">
+        <SectionHeader
+          title="Achievements"
+          subtitle="Key accomplishments & milestones"
+          eyebrow="/ 05 — wins"
+        />
 
-        <StaggerChildren className="grid sm:grid-cols-2 gap-6">
+        <StaggerChildren className="grid sm:grid-cols-2 gap-5">
           {ACHIEVEMENTS.map((a, i) => (
             <StaggerItem key={i}>
-              <div className="group glass rounded-2xl p-7 border border-white/8 hover:border-white/20 hover:shadow-xl transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
-                
-                {/* Icon */}
-                <div className="text-3xl mb-4">
-                  {a.icon}
-                </div>
-
-                {/* Title */}
-                <h3 className="font-display text-xl font-bold text-white mb-1">
-                  {a.title}
-                </h3>
-
-                {/* Subtitle */}
-                <p className="text-slate-200 text-sm mb-3">
-                  {a.subtitle}
-                </p>
-
-                {/* Description */}
-                <p className="text-slate-300 text-sm flex-1 leading-relaxed">
-                  {a.description}
-                </p>
-
-                {/* Highlight Badge */}
-                <div className="mt-5">
-                  <span className="inline-block px-3 py-1 text-xs font-semibold bg-white/10 text-white rounded-full border border-white/10 backdrop-blur-sm">
+              <article className="group surface surface-hover p-7 h-full flex flex-col">
+                <div className="flex items-start justify-between mb-5">
+                  <div className="text-4xl">{a.icon}</div>
+                  <span className="chip !bg-ink !border-ink !text-paper !text-[0.65rem] font-semibold">
                     {a.highlight}
                   </span>
                 </div>
-
-              </div>
+                <h3 className="font-display text-2xl font-medium text-ink leading-tight mb-1">
+                  {a.title}
+                </h3>
+                <p className="text-brand text-sm font-medium mb-4">{a.subtitle}</p>
+                <p className="text-ink-soft text-[0.95rem] leading-relaxed flex-1">{a.description}</p>
+              </article>
             </StaggerItem>
           ))}
         </StaggerChildren>

@@ -1,11 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { useRef, type ReactNode } from 'react'
 
 interface Props {
-  children: React.ReactNode
+  children: ReactNode
   className?: string
   delay?: number
 }
@@ -17,7 +16,7 @@ export function FadeUp({ children, className = '', delay = 0 }: Props) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
       className={className}
@@ -44,7 +43,7 @@ export function FadeIn({ children, className = '', delay = 0 }: Props) {
   )
 }
 
-export function StaggerChildren({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+export function StaggerChildren({ children, className = '' }: { children: ReactNode; className?: string }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
 
@@ -64,11 +63,11 @@ export function StaggerChildren({ children, className = '' }: { children: React.
   )
 }
 
-export function StaggerItem({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+export function StaggerItem({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 24 },
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
       }}
       className={className}
@@ -78,17 +77,25 @@ export function StaggerItem({ children, className = '' }: { children: React.Reac
   )
 }
 
-export function SectionHeader({ title, subtitle }: { title: string; subtitle?: string }) {
+export function SectionHeader({ title, subtitle, eyebrow }: { title: string; subtitle?: string; eyebrow?: string }) {
   return (
-    <FadeUp className="text-center mb-16">
-      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-slate-400 font-mono mb-4">
-        <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-        {subtitle || title.toLowerCase()}
+    <FadeUp className="mb-14">
+      <div className="flex items-center gap-3 mb-5">
+        <span className="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-brand">
+          {eyebrow || '/ section'}
+        </span>
+        <span className="h-px flex-1 bg-line" />
       </div>
-      <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
-        {title}
-      </h2>
-      <div className="mt-4 mx-auto w-16 h-0.5 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full" />
+      <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-ink tracking-tight leading-[1.02]">
+          {title}
+        </h2>
+        {subtitle && (
+          <p className="font-mono text-sm text-ink-muted md:text-right md:max-w-xs">
+            {subtitle}
+          </p>
+        )}
+      </div>
     </FadeUp>
   )
 }

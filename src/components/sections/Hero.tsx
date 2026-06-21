@@ -1,14 +1,11 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Download, ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
 import { SOCIAL } from '@/lib/data'
 
-const ROLES = [
-  'Aspiring Software Engineer',
-  'Full-Stack Developer',
-]
+const ROLES = ['CyberSecurity Enthusiast', 'Full-Stack Developer']
 
 function TypingEffect() {
   const [index, setIndex] = useState(0)
@@ -17,193 +14,162 @@ function TypingEffect() {
 
   useEffect(() => {
     const current = ROLES[index]
-
-    let timeout
+    let timeout: ReturnType<typeof setTimeout>
 
     if (!deleting) {
-      // typing
-      timeout = setTimeout(() => {
-        setDisplayed(current.slice(0, displayed.length + 1))
-      }, 80)
-
-      if (displayed === current) {
-        timeout = setTimeout(() => setDeleting(true), 1200)
-      }
+      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 80)
+      if (displayed === current) timeout = setTimeout(() => setDeleting(true), 1400)
     } else {
-      // deleting
-      timeout = setTimeout(() => {
-        setDisplayed(current.slice(0, displayed.length - 1))
-      }, 40)
-
+      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), 40)
       if (displayed === '') {
         setDeleting(false)
-        setIndex((prev) => (prev + 1) % ROLES.length)
+        setIndex(p => (p + 1) % ROLES.length)
       }
     }
-
     return () => clearTimeout(timeout)
   }, [displayed, deleting, index])
 
   return (
-    <span className="gradient-text font-display font-bold">
+    <span className="font-display italic text-brand">
       {displayed}
-      <span className="inline-block w-0.5 h-8 ml-1 bg-violet-400 animate-pulse align-middle" />
+      <span className="inline-block w-px h-[0.9em] ml-1 bg-brand animate-pulse align-middle" />
     </span>
   )
 }
 
-// Floating orb
-function Orb({ x, y, size, delay, color }: { x: string; y: string; size: number; delay: number; color: string }) {
-  return (
-    <motion.div
-      className="absolute rounded-full blur-3xl pointer-events-none"
-      style={{ left: x, top: y, width: size, height: size, background: color }}
-      animate={{
-        x: [0, 30, -20, 0],
-        y: [0, -20, 10, 0],
-        scale: [1, 1.1, 0.95, 1],
-      }}
-      transition={{
-        duration: 12,
-        delay,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      }}
-    />
-  )
-}
-
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
-
-  useEffect(() => {
-    const handleMouse = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener('mousemove', handleMouse)
-    return () => window.removeEventListener('mousemove', handleMouse)
-  }, [])
-
   return (
-    <section id="home" ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg">
-      {/* Cursor glow */}
-      <div
-        className="cursor-glow"
-        style={{ left: mousePos.x, top: mousePos.y }}
-      />
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden"
+    >
+      {/* Decorative editorial frame */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute top-24 left-6 right-6 md:left-10 md:right-10 h-px bg-line" />
+        <div className="absolute bottom-10 left-6 right-6 md:left-10 md:right-10 h-px bg-line" />
+        <div className="absolute top-24 bottom-10 left-6 md:left-10 w-px bg-line" />
+        <div className="absolute top-24 bottom-10 right-6 md:right-10 w-px bg-line" />
+      </div>
 
-      {/* Background orbs */}
-      <Orb x="10%" y="20%" size={500} delay={0} color="rgba(59,130,246,0.07)" />
-      <Orb x="60%" y="60%" size={600} delay={3} color="rgba(139,92,246,0.08)" />
-      <Orb x="80%" y="10%" size={400} delay={6} color="rgba(6,182,212,0.06)" />
-
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        {/* Badge */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-10 md:px-16">
+        {/* Top meta row */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 text-sm text-slate-300 font-mono mb-8"
+          className="flex flex-wrap items-center justify-between gap-3 mb-10 font-mono text-[0.7rem] tracking-[0.18em] uppercase text-ink-muted"
         >
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Available for Internships & Full-time Roles
+          <span>Portfolio · MMXXVI</span>
+          <span className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+            Available for internships.
+          </span>
         </motion.div>
 
-        {/* Name */}
+        {/* Headline */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-6xl sm:text-7xl md:text-8xl font-extrabold text-white leading-tight mb-4"
+          transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="font-display text-[clamp(3rem,11vw,9rem)] font-medium text-ink leading-[0.95] tracking-tight"
         >
-          Chirag{' '}
-          <span className="gradient-text">Prasad</span>
+          Chirag
+          <br />
+          <span className="italic font-light text-ink-soft">Prasad.</span>
         </motion.h1>
 
-        {/* Typing role */}
+        {/* Main content row */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-2xl sm:text-3xl md:text-4xl min-h-[44px] mb-6"
+  initial={false}
+  animate={{ opacity: 1 }}
+          className="mt-2 grid md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-end"
         >
-          <TypingEffect />
-        </motion.div>
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink-muted mb-3">
+              / currently
+            </p>
+            <p className="text-2xl md:text-3xl text-ink leading-snug">
+              <TypingEffect />
+            </p>
+            <p className="mt-6 text-ink-soft text-base md:text-lg leading-relaxed max-w-xl">
+              A developer at the intersection of{' '}
+              <span className="text-ink font-medium">full-stack engineering</span> and{' '}
+              <span className="text-ink font-medium">cybersecurity</span> — building secure, scalable
+              applications that solve real-world problems.
+            </p>
 
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-slate-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed"
-        >
-          I'm a developer who sits at the intersection of full-stack engineering and cybersecurity — building secure, scalable applications that solve real-world problems.
-        </motion.p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <button
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-paper font-medium text-sm hover:bg-brand transition-colors"
+              >
+                View Projects
+                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+              <a
+                href="/Chirag_Prasad_Resume.pdf"
+                download
+                className="group flex items-center gap-2 px-6 py-3 rounded-full border border-ink text-ink font-medium text-sm hover:bg-ink hover:text-paper transition-colors"
+              >
+                <Download size={15} />
+                Résumé
+              </a>
+            </div>
+          </div>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          <button
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-medium hover:shadow-lg hover:shadow-violet-500/25 active:scale-95 transition-all duration-200"
-          >
-            View Projects
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </button>
-          <a
-  href="/Chirag_Prasad_Resume.pdf"
-  download
-  className="group flex items-center gap-2 px-7 py-3.5 rounded-xl glass border border-white/10 text-white font-medium hover:bg-white/8 hover:border-white/20 active:scale-95 transition-all duration-200"
+          {/* Editorial portrait frame — swap the placeholder below for an <img src="/profile.jpg" .../> once a photo asset is added to /public */}
+          <motion.div
+  initial={{ opacity: 0, scale: 0.96 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, delay: 0.45 }}
+  className="absolute top-28 right-10 md:right-16 lg:right-20 w-44 md:w-52 lg:w-60 hidden md:block"
 >
-  <Download size={16} />
-  Download Resume
-</a>
+  <div className="absolute inset-0 -m-3 border border-line rounded-2xl" />
+
+  <div className="relative overflow-hidden rounded-2xl bg-paper-2 aspect-[3/4]">
+    <img
+      src="/profile.jpg"
+      alt="Chirag Prasad"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  <div className="absolute -bottom-3 -right-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-ink-muted bg-paper px-2 py-1">
+    / 2026
+  </div>
+</motion.div>
         </motion.div>
 
-        {/* Social Links */}
+        {/* Bottom meta strip */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="flex justify-center gap-4"
+          className="mt-14 pt-6 border-t border-line flex flex-wrap items-center justify-between gap-6"
         >
-          {[
-            { icon: <Github size={20} />, href: SOCIAL.github, label: 'GitHub' },
-            { icon: <Linkedin size={20} />, href: SOCIAL.linkedin, label: 'LinkedIn' },
-            { icon: <Mail size={20} />, href: `mailto:${SOCIAL.email}`, label: 'Email' },
-          ].map(s => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={s.label}
-              className="p-3 rounded-xl glass border border-white/8 text-slate-400 hover:text-white hover:border-blue-500/40 hover:bg-blue-500/10 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-200"
-            >
-              {s.icon}
-            </a>
-          ))}
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-xs text-slate-600 font-mono">scroll</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-px h-8 bg-gradient-to-b from-slate-600 to-transparent"
-          />
+          <div className="flex items-center gap-1">
+            {[
+              { icon: <Github size={16} />, href: SOCIAL.github, label: 'GitHub' },
+              { icon: <Linkedin size={16} />, href: SOCIAL.linkedin, label: 'LinkedIn' },
+              { icon: <Mail size={16} />, href: `mailto:${SOCIAL.email}`, label: 'Email' },
+            ].map(s => (
+              <a
+                key={s.label}
+                href={s.href}
+                target={s.label !== 'Email' ? '_blank' : undefined}
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="p-2.5 rounded-full text-ink-soft hover:text-brand hover:bg-paper-2 transition-colors"
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
+          <div className="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-ink-muted flex items-center gap-3">
+            <span>IIIT Bhopal</span>
+            <span className="w-1 h-1 rounded-full bg-ink-muted" />
+            <span>India</span>
+          </div>
         </motion.div>
       </div>
     </section>
