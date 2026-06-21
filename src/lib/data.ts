@@ -167,16 +167,16 @@
     {
       title: 'CodeChef & Leetcode',
       subtitle: 'Competitive Programming',
-      description: 'Achieved 2★ rating with max rating of 1555 & 1500 rating on LeetCode',
+      description: 'Achieved 3★ rating with max rating of 1601 on Codechef & 1613 rating on LeetCode',
       icon: '💻',
-      highlight: '2★',
+      highlight: '3★',
     },
     {
       title: 'DSA Practice',
       subtitle: 'LeetCode • CodeChef • GeeksforGeeks',
-      description: 'Solved 400+ data structures and algorithms problems',
+      description: 'Solved 500+ data structures and algorithms problems',
       icon: '📊',
-      highlight: '400+ Problems',
+      highlight: '500+ Problems',
     },
   ]
 
