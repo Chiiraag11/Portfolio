@@ -14,9 +14,9 @@
     { label: 'Contact', href: '#contact' },
   ]
 
+  
 
-
-  export const EXPERIENCE = [
+export const EXPERIENCE = [
     {
   role: 'Full Stack Developer Intern',
   org: 'VedaAI',
@@ -47,6 +47,7 @@
       report: '/reports/report.pdf'
     },
   ]
+
 
   export const EDUCATION = [
     {
