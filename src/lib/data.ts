@@ -53,7 +53,7 @@
       degree: 'B.Tech in Information Technology',
       institute: 'IIIT Bhopal',
       duration: '2023 – 2027',
-      gpa: '8.16 CGPA',
+      gpa: '8.18 CGPA',
       highlights: ['Data Structures & Algorithms', 'Operating Systems', 'DBMS' , 'OOPs'],
     },
     
