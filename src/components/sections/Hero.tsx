@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Download, ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
 import { SOCIAL } from '@/lib/data'
 
-const ROLES = ['CyberSecurity Enthusiast', 'Full-Stack Developer']
+const ROLES = ['CyberSecurity Practisioner', 'Full-Stack Developer']
 
 function TypingEffect() {
   const [index, setIndex] = useState(0)
