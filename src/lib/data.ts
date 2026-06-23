@@ -14,7 +14,7 @@
     { label: 'Contact', href: '#contact' },
   ]
 
-  
+
 
 export const EXPERIENCE = [
     {
@@ -263,7 +263,7 @@ export const EXPERIENCE = [
     featured: false,
   },
   {
-      title: 'finance-manager',
+      title: 'Finance-manager',
       desc: 'A RESTful backend service for managing personal finances — built with Kotlin, Spring Boot 3.x, and H2',
       stack: ['Kotlin'],
       repo: 'https://github.com/Chiiraag11/finance-manager',
@@ -297,7 +297,7 @@ export const EXPERIENCE = [
       featured: false,
     },
     {
-      title: 'qr-ify generator',
+      title: 'Qr-ify Generator',
       desc: 'Developed a QR Code Generator web application with customizable themes and color options for enhanced user experience.',
       stack: ['HTML', 'CSS3', 'Javascript', 'Bootstrap'],
       live: 'https://qr-ify-generator.vercel.app/',
