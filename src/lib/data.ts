@@ -235,10 +235,10 @@ export const EXPERIENCE = [
       border: 'border-green-500/20',
     },
     {
-      title: 'GirlScript Summer of Code',
+      title: 'GirlScript Summer of Code (GSSoc24)',
       issuer: 'GirlScript Foundation',
       date: '2024',
-      badge: '🌸',
+      badge: '🏅',
       url: '',
       color: 'from-pink-500/20 to-rose-500/20',
       border: 'border-pink-500/20',
