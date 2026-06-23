@@ -20,7 +20,7 @@
     {
   role: 'Full Stack Developer Intern',
   org: 'VedaAI',
-  duration: 'Feb 2026 – May 2026',
+  duration: 'March 2026 – June 2026',
 
   desc: [
     'Built and shipped an automated AI-grading pipeline integrating LLM APIs with Node.js and MongoDB, processing 200+ student assignments and reducing manual grading workload by 30+ hours per month.',

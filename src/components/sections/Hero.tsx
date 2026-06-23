@@ -62,7 +62,7 @@ export default function Hero() {
           <span>Portfolio · MMXXVI</span>
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
-            Available for internships.
+            Open for internships.
           </span>
         </motion.div>
 
