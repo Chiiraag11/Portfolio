@@ -305,7 +305,7 @@ export const EXPERIENCE = [
   ],
       live: 'cash-chat.vercel.app',
       repo: 'https://github.com/Chiiraag11/CashChat',
-      featured: true,
+      featured: false,
 }
 
   ]
