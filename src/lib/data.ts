@@ -124,17 +124,6 @@ export const EXPERIENCE = [
   },
 
   {
-    category: 'Testing',
-    icon: '🧪',
-    items: [
-      'Jest',
-      'Unit Testing',
-      'Integration Testing',
-      'TDD',
-    ],
-  },
-
-  {
     category: 'Concepts',
     icon: '📚',
     items: [
