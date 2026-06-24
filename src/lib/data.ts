@@ -55,7 +55,7 @@ export const EXPERIENCE = [
       institute: 'IIIT Bhopal',
       duration: '2023 – 2027',
       gpa: '8.18 CGPA',
-      highlights: ['Data Structures & Algorithms', 'Operating Systems', 'Database Management System' , 'Object Oriented Programming'],
+      highlights: ['Data Structures & Algorithms', 'Operating Systems', 'Database Management System' , 'Object Oriented Programming','Computer Networks'],
     },
   ]
 
