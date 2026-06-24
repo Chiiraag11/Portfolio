@@ -73,7 +73,7 @@ export default function Contact() {
 
         <div className="mt-24 pt-8 border-t border-line">
           <p className="text-ink-muted text-sm font-mono">
-            Built by Chirag Prasad · {new Date().getFullYear()}
+            Chirag Prasad · {new Date().getFullYear()}
           </p>
         </div>
       </div>
