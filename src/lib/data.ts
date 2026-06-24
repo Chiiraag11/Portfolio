@@ -297,21 +297,27 @@ export const EXPERIENCE = [
       featured: false,
     },
     {
-      title: 'Qr-ify Generator',
-      desc: 'Developed a QR Code Generator web application with customizable themes and color options for enhanced user experience.',
-      stack: ['HTML', 'CSS3', 'Javascript', 'Bootstrap'],
-      live: 'https://qr-ify-generator.vercel.app/',
-      repo: 'https://github.com/Chiiraag11/qr-ify-generator.git',
-      featured: false,
-    },
-  
-    {
-      title: 'Image Enhancement',
-      desc: 'Build a application for image enhancement using CLAHE Tech and Histogram Equalization',
-      stack: ['Python'],
-      repo: 'https://github.com/Chiiraag11/Image-Enhancement.git',
-      featured: false,
-    },
+  title: 'FinChat',
+  desc: 'An AI-powered personal finance dashboard that transforms natural-language questions into secure SQL queries, delivering real-time spending insights, analytics, and interactive visualizations from user transaction data.',
+  stack: [
+    'Next.js 14',
+    'React',
+    'TypeScript',
+    'PostgreSQL',
+    'Prisma',
+    'OpenAI GPT-4o Mini',
+    'Redis',
+    'NextAuth.js',
+    'TanStack Query',
+    'Zustand',
+    'Recharts',
+    'Tailwind CSS',
+    'Docker',
+  ],
+      live: 'cash-chat.vercel.app',
+      repo: 'https://github.com/Chiiraag11/CashChat',
+      featured: true,
+}
 
   ]
 
