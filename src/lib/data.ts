@@ -278,14 +278,6 @@ export const EXPERIENCE = [
     },
 
     {
-      title: 'HelpResume',
-      desc: 'Build a full stack AI powered resume builder for creating and editing professional resumes',
-      stack: ['React.js', 'Next.js', 'MongoDB', 'Tailwind' , 'Express.js' , 'Node.js'],
-      live: '#',
-      repo: 'https://github.com/Chiiraag11/HelpResume.git',
-      featured: false,
-    },
-    {
   title: 'FinChat',
   desc: 'An AI-powered personal finance dashboard that transforms natural-language questions into secure SQL queries, delivering real-time spending insights, analytics, and interactive visualizations from user transaction data.',
   stack: [
