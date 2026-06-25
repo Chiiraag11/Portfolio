@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Chirag Prasad — Aspiring Software Engineer',
-  description: 'Portfolio of Chirag Prasad — Aspiring Software Engineer, competitive programmer, and full-stack developer from IIIT Bhopal.',
+  title: 'Chirag Prasad',
+  description: 'Portfolio of Chirag Prasad — Cybersecurity practisioner, competitive programmer, and full-stack developer from IIIT Bhopal.',
   keywords: ['Chirag Prasad', 'Software Engineer', 'IIIT Bhopal', 'Portfolio', 'React', 'Next.js'],
   openGraph: {
-    title: 'Chirag Prasad — Aspiring Software Engineer',
+    title: 'Chirag Prasad',
     description: 'Portfolio of Chirag Prasad',
     type: 'website',
   },
