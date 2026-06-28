@@ -295,7 +295,7 @@ export const EXPERIENCE = [
     'Tailwind CSS',
     'Docker',
   ],
-      live: 'cash-chat.vercel.app',
+      live: 'https://cash-chat.vercel.app',
       repo: 'https://github.com/Chiiraag11/CashChat',
       featured: false,
 }
