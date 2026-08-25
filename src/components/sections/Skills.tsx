@@ -27,7 +27,7 @@ export default function Skills() {
               <h3 className="font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-white/35 mb-5 sm:mb-7">
                 {group.category}
               </h3>
-              <p className="font-display font-semibold leading-[1.05] text-[clamp(2.2rem,6vw,4.75rem)] flex flex-wrap justify-between gap-x-8 sm:gap-x-10 gap-y-3">
+              <p className="font-display font-semibold leading-[1.05] text-[clamp(1.8rem,4.5vw,3.5rem)] flex flex-wrap justify-between gap-x-8 sm:gap-x-10 gap-y-3">
                 {group.items.map((item) => (
                   <span
                     key={item}
