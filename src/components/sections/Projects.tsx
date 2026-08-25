@@ -30,7 +30,7 @@ export default function Projects() {
             <span className="w-1.5 h-1.5 rounded-full bg-lime pulse-dot" />
             <p className="eyebrow-light">selected work</p>
           </div>
-          <h2 className="font-display font-semibold text-[clamp(2.75rem,5.5vw,5rem)] text-white mb-20 tracking-tight">
+          <h2 className="font-display font-semibold text-[clamp(2.25rem,4.5vw,4rem)] text-white mb-20 tracking-tight">
             Three things I've built
           </h2>
         </FadeUp>
@@ -49,14 +49,14 @@ export default function Projects() {
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <div className="pt-2">
-                        <h3 className="font-display font-semibold text-[clamp(2.75rem,5.5vw,5rem)] leading-[1.05] tracking-tight text-white">
+                        <h3 className="font-display font-semibold text-[clamp(2.25rem,4.5vw,4rem)] leading-[1.05] tracking-tight text-white">
                           {p.title}
                         </h3>
                         <p className={`font-mono text-base sm:text-lg mt-2 ${ACCENT_TEXT[p.variant]}`}>{p.tagline}</p>
                       </div>
                     </div>
 
-                    <p className="text-white/60 leading-relaxed text-xl sm:text-2xl max-w-xl mb-8">{p.desc}</p>
+                    <p className="text-white/60 leading-relaxed text-xl sm:text-xl max-w-xl mb-8">{p.desc}</p>
 
                     <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
                       <div className="flex flex-wrap gap-3">
@@ -103,7 +103,7 @@ export default function Projects() {
   <motion.div
     whileHover={{ scale: 1.02 }}
     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-    className="relative aspect-[16/9] overflow-hidden rounded-2xl"
+    className="relative aspect-[16/9] overflow-hidden rounded-xl"
   >
     <Image
       src={p.image}
