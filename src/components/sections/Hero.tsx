@@ -7,9 +7,8 @@ import { IDENTITY, SOCIAL, EXPERIENCE } from '@/lib/data'
 const links = [
   { label: 'GitHub', href: SOCIAL.github },
   { label: 'LinkedIn', href: SOCIAL.linkedin },
-  { label: 'LeetCode', href: SOCIAL.leetcode },
-  { label: 'Email', href: `mailto:${SOCIAL.email}` },
 ]
+
 
 const current = EXPERIENCE[0]
 
@@ -157,6 +156,19 @@ export default function Hero() {
               </motion.span>
             </motion.a>
           ))}
+          <motion.a
+  href="#contact"
+  whileTap={{ scale: 0.94 }}
+  className="inline-flex items-center gap-2 rounded-lg border border-lime/60 px-5 py-2.5 font-mono text-sm text-lime hover:bg-lime/10 transition-colors duration-300"
+>
+  Contact Me
+  <motion.span
+    whileHover={{ y: 2 }}
+    transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+  >
+    ↓
+  </motion.span>
+</motion.a>
         </motion.div>
       </motion.div>
 
