@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --bg: #F6F5F1;
+  --bg-raised: #EFEEE7;
+  --ink: #15161A;
+  --ink-soft: #4B4E58;
+  --ink-faint: #8C8E96;
+
+  --accent: #1F6F5C;
+  --accent-soft: rgba(31, 111, 92, 0.09);
+
+  --accent-blue: #3457E8;
+  --accent-blue-soft: rgba(52, 87, 232, 0.09);
+
+  --accent-coral: #E4572E;
+  --accent-coral-soft: rgba(228, 87, 46, 0.1);
+
+  --lime: #CDFA4E;
+  --lime-soft: rgba(205, 250, 78, 0.12);
+  --ink-bg: #14151A;
+  --deep-blue: #10193E;
+  --electric-blue: #6C8CFF;
+  --rust: #2A140C;
+
+  --line: rgba(21, 22, 26, 0.11);
+  --line-soft: rgba(21, 22, 26, 0.06);
+
+  /* RGB triples (no alpha) so Tailwind's /opacity modifiers can compose
+     rgb(var(--x-rgb) / <alpha-value>) — plain hex vars above don't support this. */
+  --bg-rgb: 246 245 241;
+  --bg-raised-rgb: 239 238 231;
+  --ink-rgb: 21 22 26;
+  --ink-soft-rgb: 75 78 88;
+  --ink-faint-rgb: 140 142 150;
+  --accent-rgb: 31 111 92;
+  --accent-blue-rgb: 52 87 232;
+  --accent-coral-rgb: 228 87 46;
+  --lime-rgb: 205 250 78;
+  --ink-bg-rgb: 20 21 26;
+  --deep-blue-rgb: 16 25 62;
+  --electric-blue-rgb: 108 140 255;
+  --rust-rgb: 42 20 12;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--ink-faint); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-faint);
+}
+
+.eyebrow::before {
+  content: '// ';
+  color: var(--line);
+}
+
+.hairline {
+  border-color: var(--line);
+}
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.blink-cursor {
+  display: inline-block;
+  width: 0.5ch;
+  animation: blink 1s steps(1) 4;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Subtle film-grain texture for premium depth — very low opacity, no color */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Soft ambient glow used sparingly behind hero/contact for visual depth */
+.glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pulse-dot {
+  animation: pulse-dot 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-dot { animation: none; }
+}
+
+/* Light-on-dark eyebrow variant */
+.eyebrow-light {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.55);
+}
+.eyebrow-light::before {
+  content: '// ';
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Huge outlined numeral used to fill dead space in split layouts */
+.numeral-outline {
+  -webkit-text-stroke: 1.5px currentColor;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Faint dot-grid texture for dark full-bleed sections */
+.dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
