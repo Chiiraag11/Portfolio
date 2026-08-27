@@ -38,7 +38,7 @@ export default function Hero() {
         <img
   src="/chirag.jpg"
   alt="Chirag Prasad"
-  className="absolute inset-0 h-full w-full object-cover object-[center_78%]"
+  className="absolute inset-0 h-full w-full object-cover object-[center_40%]"
 />
         {/* tint + blend to keep the photo inside the site's palette */}
         {/* corner frame marks — premium/editorial touch */}
