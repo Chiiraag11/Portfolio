@@ -22,7 +22,7 @@ export const EXPERIENCE = [
   {
     role: 'Software Engineer Intern',
     org: 'Ambiguity Labs',
-    duration: 'Jul 2026 — Present',
+    duration: 'Jul 2026 — Aug 2026',
     desc: 'Built 10+ Dockerized TerminalBench tasks across ML, distributed systems, and system administration, with oracle solutions and Pytest-based verification pipelines for benchmarking LLM coding agents.',
     stack: ['Python', 'Bash', 'Docker', 'Pytest'],
   },
